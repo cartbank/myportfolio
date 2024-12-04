@@ -1,0 +1,464 @@
+/*styles the skip to main link*/
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+.skip a {
+    position: absolute;
+    top: -40px;
+}
+.skip a:focus {
+    position: absolute;
+    top: 4px;
+}
+
+/*link styling*/
+a {
+    /*transparent border prevents elements from resizing when focus border is applied*/
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+/*to show which link is hovered or focused*/
+a:focus {
+    border: 2px dotted black;
+}
+a:hover {
+    background-color: #C8DFC9;
+}
+.decoskip {
+    border: unset;
+}
+
+/*styles the background color to a light green*/
+body {
+    background-color: #C8DFC9;
+}
+
+/*styles h1*/
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+.headertext {
+    /*hides the big title when on mobile view, as screen real-estate is more valuable on mobile*/
+    display: none;
+}
+
+/*styles the about me div*/
+#aboutme {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/*styles a white bar on the top of the screen to take the user back to the top of the page*/
+.decorative {
+    background-color: white;
+    height: 15px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 5px 0 black;
+}
+
+/*found online, used to create a horizontal line and create more seperation between sections*/
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 1em 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0;
+}
+
+/*styles the picture of me*/
+.me {
+    max-width: 90%;
+    height: auto;
+    margin: 5px;
+    border: 5px solid white;
+    border-radius: 25%;
+}
+
+/*styles the navbar*/
+nav {
+    width: 100%;
+    margin: 0;
+    /*I wanted the navbar to always be positioned at the bottom for mobile users, for ease of navigation*/
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px 0 black;
+    /*avoids issues with the animations applied to the projects divs*/
+    z-index: 2;
+}
+nav ul {
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.singleul {
+    grid-template-columns: 1fr;
+}
+nav ul li {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    padding : 10px;
+    display : grid;
+}
+/*remove underline from navbar links*/
+nav ul li a {
+    text-decoration: none;
+}
+
+/*styles the h2*/
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    width: 100%;
+}
+
+/*styles p elements*/
+p {
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5%;
+}
+.bigp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 72px;
+    text-align: center;
+    padding: unset;
+    margin: 0;
+    border-radius: unset;
+    margin-top: 20px;
+}
+.errorp {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    padding: unset;
+    margin: 0;
+    border-radius: unset;
+    margin-bottom: 20px;
+}
+
+/*styles projects section*/
+#projects {
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-columns: 1fr;
+}
+#projects div {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+#projects div p {
+    margin: unset;
+    background-color: white;
+    border-radius: unset;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.mylinks {
+    justify-self: center;
+    background-color: white;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    border-radius: 5px;
+}
+li img {
+    max-height: 24px;
+}
+
+/*styles form*/
+.formholder {
+    justify-self: center;
+    margin: 0;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+label {
+    justify-self: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Styles input fields*/
+input[type=text], select, textarea {
+    background-color: white;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    justify-self: center;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #1b301f;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+}
+/* When moving the mouse over the submit button, add a lighter color */
+input[type=submit]:hover, input[type=submit]:focus {
+    background-color: #195534;
+}
+
+/*styles footer*/
+footer p {
+    /*undoes previous stylings*/
+    all: unset;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+footer p a {
+    border: 1px dotted black;
+    border-radius: 10%;
+}
+footer {
+    background-color: #fafafa;
+    text-align: center;
+    /* to account for the bottom nav bar */
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+
+/*hides the coffee tutorial portion on mobile*/
+#coffeetut {
+    display: none;
+}
+
+@media all and (min-width: 800px) {
+    /*hides the bar on desktop*/
+    .decorative {
+        display: none;
+    }
+    .decoskip {
+        display: none;
+    }
+
+    /*sticky nav on top of screen*/
+    nav {
+        position: sticky;
+        top: 0;
+        grid-row: span;
+    }
+
+    nav ul li {
+        font-size: 20px;
+    }
+    
+    /*adds more styling to sides of page*/
+    body {
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+    }
+    header {
+        background-color: white;
+        grid-area: 1 / 2 / 1 / 2;
+        box-shadow: 0 0 5px 0 black;
+    }
+    main {
+        background-color: white;
+        grid-area: 2 / 2 / 2 / 2;
+        box-shadow: 0 0 5px 0 black;
+    }
+    footer {
+        grid-area: 3 / 2 / 3 / 2;
+        padding-bottom: 20px;
+        box-shadow: 0 0 5px 0 black;
+    }
+
+    /*unhides and styles headertext on desktop*/
+    .headertext {
+        display: grid;
+        grid-column-start: 2;
+    }
+
+    /*adds border to distinguish paragraphs from rest of page*/
+    p {
+        border: solid #C8DFC9 5px;
+    }
+
+    /*styles about me and its constituent elements*/
+    #aboutme {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #aboutme h2 {
+        grid-area: 1 / 1 / 1 / -1;
+    }
+    .me {
+        grid-area: 2 / 1 / 2 / 1;
+        border: solid #C8DFC9 5px;
+        box-shadow: 0 0 5px 0 gray;
+    }
+    #aboutme p {
+        border-radius: 20px;
+        grid-area: 2 / 2 / 2 / -1;
+        margin-top: auto;
+        margin-bottom: auto;
+        box-shadow: 0 0 5px 0 gray;
+    }
+
+    /*styles projects and its constituent parts*/
+    #projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #projects a {
+        border: unset;
+        background-color: unset;
+    }
+    #projects h2 {
+        grid-area: 1 / 1 / 1 / -1;
+    }
+    #projects div {
+        margin: 20px;
+        height: 400px;
+        box-shadow: 0 0 5px 0 gray;
+    }
+    /*all of the below is so that the images get bigger and the paragraphs fade in when hovered or focused*/
+    #projects div img {
+        margin-top: auto;
+    }
+    @keyframes parahover {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    #morepara, #clientpara {
+        display: none;
+    }
+    #clientdiv:hover p, #clientdivlink:focus p, #morediv:hover p, #morediv:focus p {
+        display: unset;
+        animation-name: parahover;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    #clientdiv:hover p, #clientdivlink:focus p {
+        border: unset;
+        border-bottom: solid #C8DFC9 5px;
+    }
+    #clientdiv:hover, #clientdivlink:focus #clientdiv{
+        border: solid #C8DFC9 5px;
+    }
+    @keyframes imghover {
+        from {
+            scale: .95;
+        }
+        to {
+            scale: 1;
+        }
+    }
+    #clientdiv img, #morediv img{
+        scale: 0.95;
+    }
+    #clientdiv:hover img, #morediv:hover img {
+        animation-name: imghover;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    /*unhides coffeetut div and styles it*/
+    #coffeetut {
+        margin-left: 20px;
+        margin-right: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: antiquewhite;
+        border-radius: 20px;
+        align-content: center;
+        justify-content: center;
+    }
+    #coffeetut h2 {
+        background-color: white;
+        border: unset;
+        border-radius: 25px;
+        grid-area: 1 / 2 / 1 / 2;
+        box-shadow: 0 0 5px 0 gray;
+    }
+    #coffeetut p {
+        border-radius: 25px;
+        box-shadow: 0 0 5px 0 gray;
+        grid-area: 2 / 1 / 2 / -1;
+        margin-bottom: 20px;
+    }
+    #thisoneunder {
+        text-decoration: underline;
+    }
+    #videoplayer {
+        max-width: 100%;
+        max-height: 100%;
+        width: 500px;
+        height: auto;
+        grid-area: 3 / 1 / 4 / span 2;
+        margin-bottom: 20px;
+        justify-self: center;
+    }
+    #thevideo {
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 0 gray;
+    }
+    #listy {
+        grid-area: 3 / 3 / span 1 / span 1;
+        background-color: white;
+        max-height: 280px;
+        padding: 20px;
+        box-shadow: 0 0 5px 0 gray;
+        border-radius: 25px;
+        margin-right: 20px;
+        margin-left: 20px;
+        overflow: auto;
+    }
+    ol {
+        max-height: 100%;
+        list-style-type: decimal;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 20px;
+    }
+    /*see js file for reasoning*/
+    ol li {
+        display: none;
+    }
+
+    /*gives the link ul a border*/
+    #links ul {
+        border: solid #C8DFC9 5px;
+        box-shadow: 0 0 5px 0 gray;
+    }
+}

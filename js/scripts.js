@@ -3,10 +3,10 @@ document.getElementById("year").innerHTML = new Date().getFullYear();
 
 // I take a picture of you when you hover me!
 document.querySelector("#picofme").addEventListener("mouseover", function() {
-	document.getElementById("picofme").src = "./images/pictureofmeflash.png";
+	document.getElementById("picofme").src = "../images/pictureofmeflash.png";
 });
 document.querySelector("#picofme").addEventListener("mouseout", function() {
-	document.getElementById("picofme").src = "./images/pictureofme.jpg";
+	document.getElementById("picofme").src = "../images/pictureofme.jpg";
 });
 
 // make the instructions appear as the youtube video reaches that timestamp

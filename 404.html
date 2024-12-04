@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "css/reset.css">
+    <link rel = "stylesheet" href = "css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <!-- takes you back to the top when clicked -->
+    <a href = "#">
+        <div class = "decorative">
+            &nbsp;
+        </div>
+    </a>
+    <!--added aside tag to avoid throwing a warning with axe regarding missing landmark tags-->
+    <aside>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    </aside>
+    <header>
+        <div class = "headertext">
+            <h1 class = "headerheader">Carter Banks</h1>
+        </div>
+    </header>
+    <main class = "maincontainer" id = "main">
+        <nav>
+            <ul class = "singleul">
+                <li><a href = "index.html">Back to the main site</a></li>
+            </ul>
+        </nav>
+        <p class = "bigp">Error 404: page not found</p>
+        <br>
+        <p class = "errorp">Your webpage is in another castle</p>
+    </main>
+    <footer>
+        <p><a href = "contact.html">Contact me</a></p>
+        <br>
+        <p class = "copyinfo">Carter Banks &copy; <span id="year"></span></p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -410,6 +410,7 @@ footer {
         border-radius: 20px;
         align-content: center;
         justify-content: center;
+        box-shadow: 0 0 5px 0 gray;
     }
     #coffeetut h2 {
         background-color: white;

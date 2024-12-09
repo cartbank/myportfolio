@@ -180,8 +180,8 @@ p {
     margin: unset;
     background-color: white;
     border-radius: unset;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 .mylinks {
     justify-self: center;
@@ -343,10 +343,12 @@ footer {
     #projects h2 {
         grid-area: 1 / 1 / 1 / -1;
     }
-    #projects div {
+    #projects div, #projects a div {
         margin: 20px;
-        height: 400px;
         box-shadow: 0 0 5px 0 gray;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
     /*all of the below is so that the images get bigger and the paragraphs fade in when hovered or focused*/
     #projects div img {
@@ -361,10 +363,10 @@ footer {
         }
     }
     #morepara, #clientpara {
-        display: none;
+        visibility: hidden;
     }
     #clientdiv:hover p, #clientdivlink:focus p, #morediv:hover p, #morediv:focus p {
-        display: unset;
+        visibility: visible;
         animation-name: parahover;
         animation-duration: 1s;
         animation-fill-mode: forwards;
@@ -385,12 +387,17 @@ footer {
         }
     }
     #clientdiv img, #morediv img{
+        min-width: 0;
         scale: 0.95;
+        display: block;
     }
     #clientdiv:hover img, #morediv:hover img {
         animation-name: imghover;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+    }
+    #clientdiv img {
+        max-height: 90%;
     }
 
     /*unhides coffeetut div and styles it*/
@@ -461,4 +468,15 @@ footer {
         border: solid #C8DFC9 5px;
         box-shadow: 0 0 5px 0 gray;
     }
+}
+
+@media all and (prefers-reduced-motion) {
+    #clientdiv:hover p, #clientdivlink:focus p, #morediv:hover p, #morediv:focus p {
+        display: unset;
+        animation-name: none;
+    }
+    #clientdiv:hover img, #morediv:hover img {
+        animation-name: none;
+    }
+
 }
